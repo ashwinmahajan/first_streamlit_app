@@ -71,7 +71,7 @@ try:
     if not fruit_choice:
         streamlit.error("Please select a fruit to get information.")
     else:
-        back_from_function = request.get("https://fruityvice.com/api/fruit/" + fruit_choice) 
+        back_from_function = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice) 
         streamlit.dataframe(back_from_function)
 except URLError as e:
     streamlit.error()
